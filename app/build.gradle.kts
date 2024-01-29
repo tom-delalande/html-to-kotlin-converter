@@ -24,5 +24,9 @@ repositories {
 tasks.test {
     useJUnitPlatform()
 }
+
+val ksoupVersion = "0.3.1"
 dependencies {
+    testImplementation(kotlin("test"))
+    implementation("com.mohamedrejeb.ksoup:ksoup-html:$ksoupVersion")
 }

@@ -1,0 +1,9 @@
+= HTML to Kotlin Converter
+
+Available online at https://tinyclub.io/kotlin-html
+
+== Usage
+
+1. Add raw HTML into a file named `input.txt` at the root of the directory.
+2. Run the main function.
+3. Output will be in a file named `output.txt`

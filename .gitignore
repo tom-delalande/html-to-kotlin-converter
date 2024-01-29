@@ -1,6 +1,5 @@
 .gradle
 .idea
 build
-gradlew
-gradlew.bat
-gradle/wrapper
+input.txt
+output.txt
