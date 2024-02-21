@@ -14,7 +14,11 @@ fun convert(input: String): String {
             repeat(numTabs) {
                 output += tab
             }
-            output += "$name {\n"
+            output += when (name) {
+                "blockquote" -> "blockQuote"
+                "circle" -> "circleArea"
+                else -> name
+            } + " {\n"
             numTabs += 1
             if (attributes.isNotEmpty()) {
                 attributes.forEach {
@@ -56,9 +60,9 @@ fun convert(input: String): String {
         }
         .build()
 
-    val parsed = KsoupHtmlParser(handler)
-    parsed.write(input)
-    parsed.end()
+    val parser = KsoupHtmlParser(handler)
+    parser.write(input)
+    parser.end()
 
     return output
 }
